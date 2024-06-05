@@ -46,7 +46,7 @@ public class gurupPackageclass {
 	}
 	
 	public String getCustomerId() {
-		return driver.findElement(By.xpath("//table[@id=\"customer\"]/tbody/tr[4]/td[2]")).getText();
+		return driver.findElement(By.xpath("//table[@id='customer']/tbody/tr[4]/td[2]")).getText();
 	}
 	
 	public void closeTheBrowser() 
