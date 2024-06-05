@@ -44,12 +44,17 @@ public class gurupPackageclass {
 		driver.findElement(By.name("password")).sendKeys("Hichka");
 		driver.findElement(By.name("sub")).click();
 	}
+	
+	public String getCustomerId() {
+		return driver.findElement(By.xpath("//table[@id=\"customer\"]/tbody/tr[4]/td[2]")).getText();
+	}
+	
 	public void closeTheBrowser() 
 	{
-		driver.navigate().refresh();
+//		driver.navigate().refresh();
 		String currentUrl = driver.getCurrentUrl();
 		System.out.print(currentUrl);
-		driver.close();
+//		driver.close();
 		
 	}
 }

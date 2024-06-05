@@ -7,6 +7,8 @@ public class guru99main {
 		gg.invokeBrowser();
 		gg.inputData("mngr575227","EjazEde");
 		gg.addUser();
+		String cusId = gg.getCustomerId();
+		System.out.print(cusId);
 		gg.closeTheBrowser();
 
 	}
