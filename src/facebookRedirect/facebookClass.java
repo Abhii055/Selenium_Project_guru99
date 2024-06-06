@@ -1,6 +1,8 @@
 package facebookRedirect;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,6 +20,7 @@ public class facebookClass {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 		driver.navigate().to(url);
 	}
 	public void verifyingUrl() {
