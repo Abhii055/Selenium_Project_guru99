@@ -87,5 +87,8 @@
 	<classpathentry kind="lib" path="C:/Users/abhin/eclipse-workspace/libs/selenium-safari-driver-4.21.0-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/abhin/eclipse-workspace/libs/selenium-support-4.21.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/abhin/eclipse-workspace/libs/selenium-support-4.21.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/abhin/eclipse-workspace/libs/javafaker-1.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/abhin/eclipse-workspace/libs/snakeyaml-1.33.jar"/>
+	<classpathentry kind="lib" path="C:/Users/abhin/eclipse-workspace/libs/commons-lang3-3.12.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

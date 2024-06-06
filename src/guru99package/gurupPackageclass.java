@@ -3,12 +3,16 @@ package guru99package;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.github.javafaker.Faker;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.time.Duration;
 
 public class gurupPackageclass {
 	ChromeDriver driver;
 	String url ="https://demo.guru99.com/v4/";
+	
 	
 	public void invokeBrowser() 
 	{
@@ -27,11 +31,12 @@ public class gurupPackageclass {
 	}
 	public void addUser() {
 		driver.findElement(By.linkText("New Customer")).click();
-		
+		Faker faker = new Faker();
+		String name = faker.name().firstName();
 		  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		    wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("name")));
 		
-		driver.findElement(By.name("name")).sendKeys("Abhinav");
+		driver.findElement(By.name("name")).sendKeys(name);
 		driver.findElement(By.xpath("//input[@value='f']")).click();
 		driver.findElement(By.name("dob")).sendKeys("09/09/2001");
 		driver.findElement(By.name("addr")).sendKeys("hichka hichka homes");
