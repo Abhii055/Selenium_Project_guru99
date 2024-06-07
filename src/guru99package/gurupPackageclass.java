@@ -20,6 +20,7 @@ public class gurupPackageclass {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 		driver.get(url);
 	}
 	public void inputData(String username, String password) 
