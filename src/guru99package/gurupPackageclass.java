@@ -1,18 +1,17 @@
 package guru99package;
 
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.github.javafaker.Faker;
-
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import java.time.Duration;
+	import org.openqa.selenium.*;
+	import org.openqa.selenium.chrome.ChromeDriver;
+	import org.openqa.selenium.support.ui.WebDriverWait;
+//	import org.testng.annotations.Test;
+	
+	import com.github.javafaker.Faker;
+	import org.openqa.selenium.support.ui.ExpectedConditions;
+	import java.time.Duration;
 
 public class gurupPackageclass {
 	ChromeDriver driver;
 	String url ="https://demo.guru99.com/v4/";
-	
 	
 	public void invokeBrowser() 
 	{
@@ -23,6 +22,7 @@ public class gurupPackageclass {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 		driver.get(url);
 	}
+
 	public void inputData(String username, String password) 
 	{
 		WebElement usernameElement= driver.findElement(By.name("uid"));
@@ -30,6 +30,7 @@ public class gurupPackageclass {
 		driver.findElement(By.name("password")).sendKeys(password);
 		driver.findElement(By.name("btnLogin")).click();
 	}
+	
 	public void addUser() {
 		driver.findElement(By.linkText("New Customer")).click();
 		Faker faker = new Faker();
