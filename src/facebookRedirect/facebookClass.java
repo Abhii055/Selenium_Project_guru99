@@ -50,11 +50,17 @@ public class facebookClass {
         emailelement.sendKeys(emaiurl);
 		
 		driver.findElement(By.name("reg_passwd__")).sendKeys("Hichka");
-		Select selDate = new Select(driver.findElement(By.id("day")));
+//		Select selDate = new Select(driver.findElement(By.id("day")));
+		
+		WebElement selDate = driver.findElement(By.id("day"));
+		Select dropday = new Select(selDate);
+		dropday.selectByVisibleText("21");
+		
 		Select selMonth = new Select(driver.findElement(By.id("month")));
 		Select selYear = new Select(driver.findElement(By.id("year")));
 		
-		selDate.selectByVisibleText("21");
+		
+		
 		selMonth.selectByVisibleText("Jun");
 		selYear.selectByVisibleText("1989");
 		driver.findElement(By.xpath("//input[@type='radio' and @value='2']")).click();

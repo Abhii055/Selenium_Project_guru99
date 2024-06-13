@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNG.testcaseClass">
+      <class name="featuresTestNG.featuresofTestNG">
         <methods>
-          <include name="invokeBrowser"/>
-          <include name="tearDown"/>
-          <include name="openChrome3"/>
+          <include name="login"/>
+          <include name="chatPage"/>
         </methods>
-      </class> <!-- testNG.testcaseClass -->
+      </class> <!-- featuresTestNG.featuresofTestNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

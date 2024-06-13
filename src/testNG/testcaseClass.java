@@ -1,7 +1,6 @@
 package testNG;
 
-import java.time.Duration;
-
+import java.time.Duration;	
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -24,18 +23,18 @@ public class testcaseClass {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(url);
-	}
-	@Test
+	}	
+	@Test(priority=3,groups="check")
 	public void openChrome1() {
 		String  title=   driver.getTitle();
 		System.out.println(title);
 	}
-	@Test
+	@Test(priority=1,groups="element")
 	public  void openChrome2() {
 	String b = driver.findElement(By.xpath("//a[text()='About Us']")).getText();	
 	System.out.println(b);
 	}
-	@Test
+	@Test(priority=2,groups="element")
 	public void openChrome3() {
 		String a = driver.findElement(By.xpath("//div[@class='footer_menu_div']//a[text()='Career']")).getText();
 	System.out.println(a);
