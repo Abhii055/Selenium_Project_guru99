@@ -1,9 +1,9 @@
 package featuresTestNG;
 
-import java.time.Duration;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-//import org.testng.annotations.BeforeTest;
+
+
+//import java.time.Duration;
 
 import org.testng.annotations.Test;
 
@@ -11,37 +11,54 @@ import org.testng.annotations.Test;
 
 public class featuresofTestNG {
 	
-	ChromeDriver driver;
-	String url = "https://ff.garena.com/en/";
+
 	
-	@Test
-	public void invokeBrowser() {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\abhin\\eclipse-workspace\\libs\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get(url);
-		System.out.println("invoking is done");
-	}
-	
-	@Test(dependsOnMethods ="invokeBrowser")
+	@Test(dependsOnMethods = "close")
 	public void login() {
 		System.out.println("Login done");
 //		int i = 9/0;
 	}
-	@Test(dependsOnMethods = "login")
+	@Test(dependsOnMethods = "close")
 	public void HomePage() {
 		System.out.println("Home Page loaded");
 	}
-	@Test(dependsOnMethods = "login")
+	@Test(dependsOnMethods = "close")
 	public void chatPage() {
+		int i = 3/0;
 		System.out.println("Chat page is working fine");
 //		int j =8/0;
 	}
-	@Test(dependsOnMethods = "login")
+	@Test(dependsOnMethods = "close")
 	public void messagePage() {
 		System.out.println("Message sent to the respective users");
 	}
+	@Test(dependsOnMethods = "messageppage")
+	public void close() {
+		System.out.println("working finished");
+	}
+	@Test(invocationCount = 5)
+	public void messageppage() {
+		
+		System.out.println("Message sent to the respective users");
+	}
 }
+
+
+
+
+
+//ChromeDriver driver;
+//String url ="https://www.garenaff.com";
+
+//@BeforeTest
+//public void invokeBrowser() {
+//	System.setProperty("webdriver.chrome.driver", "C:\\Users\\abhin\\eclipse-workspace\\libs\\chromedriver.exe");
+//	driver = new ChromeDriver();
+//	driver.manage().window().maximize();
+//	driver.manage().deleteAllCookies();
+//	driver.get(url);	
+//}
+//@AfterTest
+//public void closeBrowser() {
+//	driver.close();
+//}

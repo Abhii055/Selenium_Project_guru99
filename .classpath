@@ -92,6 +92,5 @@
 	<classpathentry kind="lib" path="C:/Users/abhin/eclipse-workspace/libs/commons-lang3-3.12.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/abhin/eclipse-workspace/libs/testng-7.4.0.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/abhin/eclipse-workspace/libs/jquery.min.js"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

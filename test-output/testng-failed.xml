@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="featuresTestNG.featuresofTestNG">
+      <class name="assertion.validation">
         <methods>
-          <include name="login"/>
-          <include name="chatPage"/>
+          <include name="closeBrowser"/>
+          <include name="getTitle"/>
+          <include name="invokeBrowser"/>
         </methods>
-      </class> <!-- featuresTestNG.featuresofTestNG -->
+      </class> <!-- assertion.validation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
