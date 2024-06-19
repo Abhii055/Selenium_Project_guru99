@@ -24,9 +24,7 @@ public class featuresofTestNG {
 	}
 	@Test(dependsOnMethods = "close")
 	public void chatPage() {
-		int i = 3/0;
 		System.out.println("Chat page is working fine");
-//		int j =8/0;
 	}
 	@Test(dependsOnMethods = "close")
 	public void messagePage() {

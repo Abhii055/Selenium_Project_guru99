@@ -10,18 +10,18 @@ package guru99package;
 	import java.time.Duration;
 
 public class gurupPackageclass {
-	ChromeDriver driver;
-	String url ="https://demo.guru99.com/v4/";
-	
-	public void invokeBrowser() 
-	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\abhin\\eclipse-workspace\\libs\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-		driver.get(url);
-	}
+		ChromeDriver driver;
+		String url ="https://demo.guru99.com/v4/";
+		
+		public void invokeBrowser() 
+		{
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\abhin\\eclipse-workspace\\libs\\chromedriver.exe");
+			driver = new ChromeDriver();
+			driver.manage().window().maximize();
+			driver.manage().deleteAllCookies();
+			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+			driver.get(url);
+		}
 
 	public void inputData(String username, String password) 
 	{

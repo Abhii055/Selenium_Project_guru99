@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="assertion.validation">
+      <class name="credMudra.credMudraClass">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="getTitle"/>
+          <include name="otpVerification"/>
+          <include name="inputNumber"/>
           <include name="invokeBrowser"/>
         </methods>
-      </class> <!-- assertion.validation -->
+      </class> <!-- credMudra.credMudraClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
